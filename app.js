@@ -12,7 +12,7 @@ hbs.registerPartials(__dirname + '/views/partials', function(err) {});
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
     res.render('home', {
         title: 'Curso node',
         name: 'Pedro Duran'
@@ -30,10 +30,10 @@ app.get('/elements', (req, res) => {
         title: 'elements',
         name: 'Pedro Duran'
     });
-})
+}) */
 
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/index.html');
 })
 
 app.listen(port, () => {
